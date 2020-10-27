@@ -1,0 +1,171 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
+body {
+    margin: 0;
+}
+a {
+  text-decoration: none;  
+}
+.icon:hover path {
+    fill: rgb(37, 230, 200);
+}
+.namecolor {
+    color: rgb(43, 170, 236);
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+.flexc p {
+    margin: 0 0 0 1em;
+}
+.flex p {
+    padding-left: 0.5em;
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid lightgrey;
+    padding: 0em 10%;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 3em 10%;
+    align-items: center;
+}
+.top nav ul, .main nav ul {
+    display: flex;
+    list-style: none;
+}
+.top nav ul li, .main nav ul li {
+    padding-left: 1.5em;
+}
+.showcase {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(222, 222, 222);
+    padding-top: 2em;
+}
+.showcase h1 {
+    font-size: 3em;
+}
+.showcase2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.showp {
+    padding-bottom: 2em; 
+}
+.showcaseknapp {
+    background-color: rgb(37, 230, 200);
+    padding: 1em 2em;
+    display: inline;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.showcaseknapp:hover{
+    background-color: black;
+}
+.about {
+    padding: 0 10%;
+    padding-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about h2 {
+    border-bottom: 3px solid turquoise;
+    padding-bottom: 1em;
+    font-size: 2.5em;
+}
+.info {
+    max-width: 40%;
+}
+.aboutul {
+    display: flex;
+    list-style: none;
+    padding-top: 2em;
+    padding-left: 0;
+}
+.aboutul ul{
+    list-style: none;
+    padding-left: 0;
+    padding-right: 5em;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 450px;
+    height: 436px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 1em;
+}
+.services {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+    padding: 5em 10%;
+}
+.services h3 {
+    text-align: center;
+    border-bottom: 4px solid turquoise;
+    padding: 1em;
+    max-width: 30%;
+    margin: 0 auto;
+}
+#card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 2em;
+}
+.card:hover > .svgicon {
+    background-color: rgb(37, 175, 230);
+}
+
+.svgicon {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(37, 230, 200);
+    padding: 25px;
+    margin-bottom: 1.5em;
+}
+.appointment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(43, 181, 236);
+    padding: 2.5em 10%;
+    color: white;
+}
+.appointment p {
+    background-color: white;
+    padding: 1em 2.5em;
+    border-radius: 5px;
+    color: rgb(43, 170, 236);
+    font-weight: 700;
+}
+.appointment p:hover {
+    background-color: rgb(37, 175, 230);
+    color: white;
+    box-shadow:inset 0px 0px 0px 1px white;
+}
+footer {
+    background-color: rgb(37, 175, 230);
+    padding: 0.8em;
+    text-align: center;
+    color: white;
+}
