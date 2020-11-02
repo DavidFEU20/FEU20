@@ -1,11 +1,23 @@
 * {
-    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
 }
 body {
     margin: 0;
+    font-family: roboto, sans-serif;
+
+}
+h1, h2 {
+    font-family: roboto slab, serif;
+}
+h1, h2, h3 {
+    color: rgb(53, 53, 53);
+}
+p {
+    color: rgb(98, 98, 98);
 }
 a {
-  text-decoration: none;  
+  text-decoration: none;
+  color: rgb(98, 98, 98);  
 }
 .icon:hover path {
     fill: rgb(37, 230, 200);
@@ -13,11 +25,11 @@ a {
 .namecolor {
     color: rgb(43, 170, 236);
 }
-.flex {
+.flexheadmain {
     display: flex;
     align-items: center;
 }
-.flexc {
+.flexcheadmain {
     display: flex;
     flex-direction: column;
 }
@@ -73,7 +85,7 @@ a {
     font-weight: 700;
 }
 .showcaseknapp:hover{
-    background-color: black;
+    background-color: rgb(37, 175, 230);
 }
 .about {
     padding: 0 10%;
@@ -95,6 +107,12 @@ a {
     list-style: none;
     padding-top: 2em;
     padding-left: 0;
+}
+.info > ul > li {
+    color: rgb(43, 170, 236);
+}
+.info > ul > li > ul > li {
+    color: rgb(2, 4, 5);
 }
 .aboutul ul{
     list-style: none;
@@ -125,30 +143,40 @@ a {
     max-width: 30%;
     margin: 0 auto;
 }
-#card {
+#cardcontainer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 2em;
 }
-.card:hover > .svgicon {
+.card:hover > .cardicon {
     background-color: rgb(37, 175, 230);
 }
-
-.svgicon {
+.cardicon {
+    position: relative;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 7em;
+    width: 7em;
     background-color: rgb(37, 230, 200);
-    padding: 25px;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
+}
+.svgicon {
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 .appointment {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(43, 181, 236);
-    padding: 2.5em 10%;
+    background-color: rgb(37, 175, 230, 0.9);
+    padding: 4em 10%;
+}
+.appointment h3 {
     color: white;
 }
 .appointment p {
@@ -167,5 +195,8 @@ footer {
     background-color: rgb(37, 175, 230);
     padding: 0.8em;
     text-align: center;
-    color: white;
+}
+footer p {
+    color: rgb(255, 255, 255, 0.6);
+    font-size: 0.9em;
 }
