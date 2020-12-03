@@ -1,0 +1,795 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+.flexc {
+    display: flex;
+    flex-direction: column;
+}
+.justifycsb {    justify-content: space-around;}
+.textc {    text-align: center;}
+.jcc {    justify-content: center;}
+.asc {    align-self: center;}
+.aic {    align-items: center;}
+.jsc {    align-self: center;}
+.jsfc {    justify-self: center;}
+.wrap {    flex-wrap: wrap; }
+.space {     justify-content: space-around; }
+
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5rem;
+    color: #8A8A8A;
+}
+.mincontainer{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+h1 {
+    font-size: 2rem;
+    line-height: 2em;
+}
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    color: #333333;
+}
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.logo span {
+    color: #FFBB00;
+    font-size: 3em;
+}
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+header {
+    background-image: url("/images/blue_background_crop.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    color: white;
+}
+.headnav {
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-top: .5em;
+    flex-wrap: wrap;
+}
+.headnav nav a, footer nav a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.headnav nav a:hover, footer nav a:hover {
+    color: #FFBB00;
+}
+.headnav nav a:hover::before, footer nav a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background-color: #FFBB00;
+}
+.nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    position: absolute;
+    top: 2rem;
+    right: 0px;
+    margin-right: 1.5em;
+    cursor: pointer;
+}
+
+header nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    right: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    z-index: 999;
+}
+
+.headnav ul {
+    background-color: #3895f3c2;
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2em 0 0 0;
+}
+
+.headnav li, footer li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+header button {
+    font-weight: bold;
+    color: white;
+    width: 9.5rem;
+    height: 3.2rem;
+    border-radius: 10px;
+}
+.headnav button {
+    background-color: #FFBB00;
+    border: none;
+}
+.headnav button:hover {
+    background-color: #1487FD;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.bgnone { 
+    border: solid 2px #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+}
+.headnav button {
+    width: 6.5rem;
+    height: 2.7rem;
+    margin-left: 2em;
+    font-size: 1rem;
+}
+.show {
+    padding: 0 0 15em 0;
+}
+.show button:hover {
+    background-color: #1487FD;
+    cursor: pointer;
+}
+
+.appbutton {
+    padding:  0.5em 1.5em;
+    width: 12rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1em;
+    border-radius: 10px;
+    background-color: #F8F8F8;
+    color: #111111;
+}
+.appbutton:hover {
+    box-shadow:inset 0px 0px 0px 2px #8A8A8A;
+    cursor: pointer;
+}
+.appbh {
+    font-size: 0.6em;
+    color: #6B6B6B;
+}
+.appbt {
+    font-size: 1em;
+    font-weight: 600;
+}
+.icon {
+    font-size: 2rem;
+    margin-right: 0.5em;
+}
+.showplay img, .showplay p {
+    margin-left: 1em;
+}
+.showplay p {
+    align-self: flex-end;
+}
+.showplay a {
+    text-decoration: none;
+    color: white;
+}
+.showplay a:hover {
+    text-decoration: underline;
+    color: #FFBB00;
+}
+.showbilder {
+    position: relative;
+    font-size: .5rem;
+    width: 27em;
+    height: 35em;
+    margin-top: 6em;
+}
+.showbild1 {
+    position: absolute;
+    z-index: 0;
+    left: 10em;
+    height: 35em;
+}
+.showbild2 {
+    position: absolute;
+    z-index: 1;
+    top: 6em;
+    height: 35em;
+}
+.eclogo {
+    margin: 3em 0 1em;
+    display: none;
+}
+.eclogo img {
+    margin: 2em;
+}
+
+/*  */
+.introcolor {
+    color: #FFBB00;
+    background-color: rgba(255, 187, 0, 0.15);
+    padding: 0.5em 1.5em;
+    border-radius: 10px;
+}
+.about {
+    padding: 1rem 0 2rem 0;
+}
+.aboutus {
+    max-width: 570px;
+}
+.aboutbilder {
+    position: relative;
+    font-size: .45rem;
+    width: 18em;
+    height: 35em;
+    margin-bottom: 5em;
+}
+.aboutbild {
+    position: absolute;
+    z-index: 2;
+    height: 35em;
+}
+.aboutcirkel1 {
+    position: absolute;
+    left: -2.5em;
+    top: 6em;
+    border-radius: 50%;
+    width: 22em;
+    height: 22em;
+    border: 1px solid #cccccc4d;
+}
+
+/* rotation ? */
+
+.aboutcirkel2 {
+    position: absolute;
+    left: -7em;
+    top: 1em;
+    border-radius: 50%;
+    width: 32em;
+    height: 32em;
+    border: 1px solid #cccccc4d;
+    rotate: -25deg;
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    animation-timing-function: linear;
+}
+@keyframes rotate {
+    0% {
+        rotate: -25deg;
+    }
+    100% {
+        rotate: 335deg;
+    }
+}
+.aboutsmallcirkel1 {
+    position: absolute;
+    top: 50%;
+    left: -1%;
+    border-radius: 50%;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #FFBB00;
+    border: 0.25em solid #FFBB00;
+    animation-name: fontsize;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+}
+@keyframes fontsize {
+    0% {
+        font-size: 1rem;
+    }
+    25% {
+        font-size: 2rem;
+    }
+    50% {
+        font-size: 1rem;
+    }
+    75% {
+        font-size: 2rem;
+    }
+    100% {
+        font-size: 1rem;
+    }
+}
+.aboutsmallcirkel2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #cccccc4d;
+}
+.aboutsmallcirkel3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    border: 1px solid #cccccc4d;
+}
+.aboutsmallcirkel4 {
+    position: absolute;
+    top: 50%;
+    left: 99%;
+    border-radius: 50%;
+    width: 0.75em;
+    height: 0.75em;
+    background-color: #1487FD;
+    border: 0.25em solid #1487FD;
+    animation-name: fontsize;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+}
+.aboutsmallcirkel5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    border: 1px solid #cccccc4d;
+}
+.aboutsmallcirkel6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    border: 1px solid #cccccc4d;
+}
+
+.features {
+    padding: 3rem 0;
+    background-color: #F5F5F5;
+    position: relative;
+}
+.dotsbig {
+    position: absolute;
+    top: 8rem;
+    display: none;
+}
+.div1 {
+    max-width: 560px;
+}
+.div1 p {
+    max-width: 450px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "h h"
+                            "h h"
+                            "box2 box3"
+                            "box4 box5";
+}
+.bicon {
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+.btext div {
+    color: #333333;
+}
+.btext p {
+    font-size: 0.75rem;
+}
+.box1 {
+    grid-area: h;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
+.box4{
+    grid-area: box4;
+}
+.box5{
+    grid-area: box5;
+}
+
+.bilder {
+    position: relative;
+    font-size: .5rem;
+    width: 40em;
+    height: 35em;
+}
+.bild1 {
+    position: absolute;
+    z-index: 2;
+    height: 35em;
+    left: 16em;
+    
+}
+.bild2 {
+    position: absolute;
+    z-index: 1;
+    height: 30em;
+    left: 6em;
+    top: 3em;
+    transform: rotate(-40deg);
+}
+.bild3 {
+    position: absolute;
+    z-index: 0;
+    height: 15em;
+    left: 9em;
+    bottom: 0;
+}
+.cirkel1 {
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    left: 7em;
+    top: 21em;
+    background-color: #1487FD;
+}
+.cirkel2 {
+    position: absolute;
+    left: 23em;
+    top: 10em;
+    border-radius: 50%;
+    width: 15em;
+    height: 15em;
+    border: 3em solid #FFBB00;
+}
+.screens {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+#carouselExampleIndicators {
+    margin: 5em 0;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: -4em;
+    filter: invert(25%);
+}
+.carousel-control-prev {
+    filter: invert(75%);
+    left: -5%;
+}
+.carousel-control-next {
+    filter: invert(75%);
+    left: 90%;
+}
+.carousel-inner {
+    width: 80%;
+    margin: 0 auto;
+}
+.carousel img {
+    width: 50%;
+  
+}
+.stats {
+    background-image: url("/images/appstatsl.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1em;
+    margin: 3em 0;
+}
+.statnum {
+    color: #3096FE;
+    font-size: .9rem;
+    font-weight: bold;
+    margin-top: 1em;
+}
+.stattext {
+    color: #333333;
+    margin-top: 1em;
+}
+.download h2 {
+    color: white;
+    font-size: 1.4rem;
+}
+.download {
+    padding-top: 3rem;
+    background-image: url("/images/dlBgl.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+}
+.download .appbutton {
+    background-color: white;
+}
+.dlbilder {
+    position: relative;
+    font-size: .6rem;
+    width: 31em;
+    height: 35em;
+    overflow: hidden;
+}
+.dlbild1 {
+    position: absolute;
+    top: 6em;
+    left: 7em;
+    z-index: 1;
+    height: 35em;
+    animation-name: slide-in-up2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.dlbild2 {
+    position: absolute;
+    top: 10em;
+    height: 26em;
+    animation-name: slide-in-up;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.dlbild3 {
+    position: absolute;
+    top: 10em;
+    left: 18em;
+    height: 26em;
+    animation-name: slide-in-up;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes slide-in-up {
+    0% {
+        top: 40em;
+    }
+    100% {
+        top: 10em;
+    }
+}
+@keyframes slide-in-up2 {
+    0% {
+        top: 40em;
+    }
+    100% {
+        top: 6em;
+    }
+}
+.contact {
+    background-color: #fff;
+    margin: 5em 0;
+}
+
+.formgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "n e"
+                            "m m"
+                            "m m"
+                            "m m";
+    gap: 1em;                            
+}
+.name {
+    grid-area: n;
+    background-color: #FBFBFB;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1em;
+}
+.email {
+    grid-area: e;
+    background-color: #FBFBFB;
+    border: none;
+    border-radius: 10px;
+    padding-left: 1em;
+}
+.message {
+    grid-area: m;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FBFBFB;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    resize: none;
+}
+.formbutton {
+    color: white;
+    background-color: #3096FE;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 10px;
+    margin: 2em;
+    border: none; 
+}
+.formbutton:hover {
+    cursor: pointer;
+    background-color: #006eff;
+}
+.containercontact {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 .5em;
+}
+footer {
+    background-image: url("/images/footerbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2em 0;
+}
+footer nav div {
+    padding: 2rem 1rem 2rem 0;
+}
+.socials a:hover > .icons {
+    background-color: #006eff;
+}
+.icons {
+    color: white;
+    background-color: #5EADFE;
+    margin: 0.5rem;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;    
+    border-radius: 25%;
+}
+
+@media (min-width: 435px) {
+    .appbutton {
+        margin-right: 1em;
+        margin-left: 0;
+    }
+    .statnum {
+        font-size: 1.1rem;
+    }
+    .bilder {
+        font-size: .6rem;
+    }
+    .aboutbilder {
+        font-size: .55rem;
+    }
+    
+}
+@media (min-width: 750px) {
+    .eclogo {
+        display: block;
+    }
+    .aboutbilder {
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    .statnum {
+        font-size: 1.4rem;
+    }
+    .midimgs {
+        display: inline-block;
+    }
+}
+@media (min-width: 975px) {
+    .nav-toggle-label {
+        display: none;
+    }
+    .headnav {
+        padding: 1em;
+        align-items: center;
+    }
+    .logo {
+        padding: 0em 0;
+
+    }
+    header nav {
+        position: relative;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+    }
+  
+    .headnav ul {
+        display: flex;
+        background: none;
+        padding: 1em 0em;
+    }
+    
+    .headnav li {
+    margin-bottom: 0em;
+    align-self: center;
+    }
+    nav li {
+        margin-right: .5em;
+    }
+    .headnav button {
+        width: 9.5rem;
+        height: 3.2rem;
+        
+    }
+    footer ul {
+        flex-direction: row;
+    }
+    h1 {
+        font-size: 3.5rem;
+        line-height: 2em;
+    }
+    h2 {
+        font-size: 2rem;
+        line-height: 1.5em;
+        color: #333333;
+    }
+    .showbilder {
+        font-size: .9rem;
+    }
+    .statnum {
+        font-size: 2rem; 
+    }
+    .download h2 {
+        font-size: 2.5rem;
+    }
+    .bilder {
+        font-size: .75rem;
+    }
+    .outerimgs {
+        display: inline-block;
+    }
+}
+@media (min-width: 1350px) {
+    .justifycsb {
+        justify-content: space-between;
+    }
+    .mincontainer{
+        padding: 0 3rem;
+    }
+    .showbilder, .aboutbilder, .dlbilder, .bilder{
+        font-size: 1rem;
+    }
+    .dotsbig {
+        display: block;
+    }
+}
