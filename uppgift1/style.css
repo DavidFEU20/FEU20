@@ -1,13 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
+
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
-    font-family: roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(98, 98, 98);
 
 }
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 450px));
+    gap: 2em;
+    justify-content: center;
+    padding: 3em 0;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.jc-sb {
+    justify-content: space-between;
+}
+.jc-sa {
+    justify-content: space-around;
+}
+.jc-se {
+    justify-content: space-evenly;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 1920px;
+}
 h1, h2 {
-    font-family: roboto slab, serif;
+    font-family: 'Roboto Slab', serif;
 }
 h1, h2, h3 {
     color: rgb(53, 53, 53);
@@ -22,48 +53,45 @@ a {
 .icon:hover path {
     fill: rgb(37, 230, 200);
 }
-.namecolor {
-    color: rgb(43, 170, 236);
-}
-.flexheadmain {
-    display: flex;
-    align-items: center;
-}
-.flexcheadmain {
-    display: flex;
-    flex-direction: column;
-}
-.flexc p {
-    margin: 0 0 0 1em;
-}
-.flex p {
-    padding-left: 0.5em;
+.about svg, .showcase svg, .top {
+    display: none;
 }
 .top {
-    display: flex;
-    justify-content: space-between;
     border: 2px solid lightgrey;
-    padding: 0em 10%;
+    
+}
+.top p {
+    padding-left: 0.5em;
 }
 .main {
-    display: flex;
-    justify-content: space-between;
-    padding: 3em 10%;
+    padding: 3em 0;
     align-items: center;
 }
 .top nav ul, .main nav ul {
     display: flex;
     list-style: none;
+    padding: 0;
+    margin-bottom: 0;
 }
-.top nav ul li, .main nav ul li {
+.top nav ul li {
     padding-left: 1.5em;
 }
+.main a:hover {
+    color: rgb(37, 230, 200);
+}
+.main nav ul li {
+    padding: 0 0.5em;
+}
 .showcase {
+    background-color: rgb(222, 222, 222);
+}
+.flexshow {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(222, 222, 222);
-    padding-top: 2em;
+    padding: 0 3em;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 .showcase h1 {
     font-size: 3em;
@@ -79,75 +107,59 @@ a {
 .showcaseknapp {
     background-color: rgb(37, 230, 200);
     padding: 1em 2em;
-    display: inline;
     color: white;
     border-radius: 10px;
     font-weight: 700;
+    width: auto;
+    margin: 1em 5em;
+    text-align: center;
 }
 .showcaseknapp:hover{
     background-color: rgb(37, 175, 230);
 }
 .about {
-    padding: 0 10%;
     padding-top: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding-bottom: 4em;
 }
 .about h2 {
     border-bottom: 3px solid turquoise;
     padding-bottom: 1em;
     font-size: 2.5em;
 }
+.namecolor {
+    color:  rgb(37, 175, 230);
+}
 .info {
-    max-width: 40%;
+    flex: 1;
 }
 .aboutul {
     display: flex;
-    list-style: none;
     padding-top: 2em;
-    padding-left: 0;
 }
-.info > ul > li {
-    color: rgb(43, 170, 236);
-}
-.info > ul > li > ul > li {
-    color: rgb(2, 4, 5);
-}
-.aboutul ul{
-    list-style: none;
-    padding-left: 0;
-    padding-right: 5em;
+.aboutbottom {
+    padding-left: 3em;
 }
 .card {
     display: flex;
     flex-direction: column;
     background-color: white;
-    width: 450px;
-    height: 436px;
+    height: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 2em 1em;
+    padding: 3em 0;
 }
 .services {
     display: flex;
     flex-direction: column;
     background-color: rgb(237, 237, 237);
-    padding: 5em 10%;
 }
 .services h3 {
     text-align: center;
     border-bottom: 4px solid turquoise;
     padding: 1em;
-    max-width: 30%;
+    max-width: 500px;
     margin: 0 auto;
-}
-#cardcontainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 2em;
 }
 .card:hover > .cardicon {
     background-color: rgb(37, 175, 230);
@@ -170,11 +182,9 @@ a {
     margin: 0;
 }
 .appointment {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgb(37, 175, 230, 0.9);
-    padding: 4em 10%;
+    padding: 4em 0;
+    text-align: center;
 }
 .appointment h3 {
     color: white;
@@ -199,4 +209,44 @@ footer {
 footer p {
     color: rgb(255, 255, 255, 0.6);
     font-size: 0.9em;
+}
+@media (min-width: 920px) {
+    .container {
+        padding: 0 4em;
+    }
+    .about svg, .top {
+        display: block;
+    }
+    .about {
+       padding-bottom: 0;
+    }
+    .main .jc-se {
+        justify-content: space-between;
+    }
+    .main nav ul li {
+        padding-left: 1.5em;
+        padding-right: 0;
+    }
+    .flexshow {
+        padding-top: 2em;
+
+    }
+    .appointment .jc-sa{
+        justify-content: space-between;
+    }
+    .showcaseknapp {
+        margin: 3em auto;
+    }
+}
+@media (min-width: 1220px) {
+    .container {
+        padding: 0 7em;
+    }
+    .showcase svg {
+        display: block;
+    }
+    .showcaseknapp {
+        width: 40%;
+        margin: 0;
+    }
 }
