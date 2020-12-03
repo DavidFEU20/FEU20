@@ -1,0 +1,53 @@
+@import "_colors.scss";
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: $bgsecondary;
+}
+.mincenter {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containermin {
+    max-width: 1220px;
+    margin: 1rem 1rem;
+    padding: 1rem 2rem;
+    box-shadow: $black 0px 1px 5px 0px;
+    background-color: $bgprimary;
+}
+h4 {
+    margin: 2rem 0;
+    border-bottom: 4px solid $primary;
+}
+.form-control {
+    border-style: none;    
+    border-bottom: 2px solid $black;
+    border-radius: 0;
+    margin-bottom: .5rem;
+}
+.form-check {
+    margin-top: 1rem;
+}
+form {
+    padding-bottom: 1rem;
+    label {
+        color: $gray;
+    }
+    button {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5rem;
+    }
+}
