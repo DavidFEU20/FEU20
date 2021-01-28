@@ -22,14 +22,14 @@ const listTodos = () => {
     
     if (todo.completed) {
       todohtml = `<div  class="card col-md-9 my-2 bg-light">
-                        <div id="${todo.id}" class="p-4 d-flex justify-content-between align-items-center">
+                        <div id="${todo.id}" class="abc p-4 d-flex justify-content-between align-items-center">
                             <h3 class="title text-color">${todo.title}</h3>
-                            <button type="button" class="btn btn-danger completed">X</button>
+                            <button type="button" class="btn btn-danger">X</button>
                         </div>
                     </div>`
     } else {
       todohtml = `<div  class="card col-md-9 my-2">
-                        <div id="${todo.id}" class="p-4 d-flex justify-content-between align-items-center">
+                        <div id="${todo.id}" class="abc p-4 d-flex justify-content-between align-items-center">
                             <h3 class="title">${todo.title}</h3>
                             <button type="button" class="btn onhover">X</button>
                         </div>
@@ -101,7 +101,7 @@ document.querySelector('#output').addEventListener('click', (e) => {
     } 
   }
 
-  if(e.target.classList.contains('btn-danger' && 'completed')) {
+  if(e.target.classList.contains('btn-danger')) {
     deleteTodo(e.target.parentNode.id)
   }
   }
