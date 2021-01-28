@@ -1,0 +1,13 @@
+.text-color {
+    color: rgba(0, 0, 0, 0.192);
+}
+
+.onhover:hover {
+    cursor: not-allowed!important;
+}
+.title:hover {
+    cursor: pointer;
+}
+.d-flex:hover {
+    cursor: pointer;
+}
