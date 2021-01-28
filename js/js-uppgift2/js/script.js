@@ -85,7 +85,7 @@ const deleteTodo = id => {
 document.querySelector('#output').addEventListener('click', (e) => {
 
   if (e.target.classList.contains('title')) {
-    for( var i = 0; i < todos.length; i++) {
+    for( let i = 0; i < todos.length; i++) {
       if(todos[i].id == e.target.parentNode.id) {
         todos[i].completed = !todos[i].completed;
         listTodos()
@@ -93,7 +93,7 @@ document.querySelector('#output').addEventListener('click', (e) => {
     } 
   }
   if (e.target.classList.contains('d-flex')) {
-    for( var i = 0; i < todos.length; i++) {
+    for( let i = 0; i < todos.length; i++) {
       if(todos[i].id == e.target.id) {
         todos[i].completed = !todos[i].completed;
         listTodos()
