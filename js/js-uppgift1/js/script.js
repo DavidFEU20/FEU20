@@ -78,9 +78,8 @@ const renderUsers = () => {
 document.querySelector('#regForm').addEventListener('submit', (e) => {
     e.preventDefault();
 
-    validateText('firstName');
-    validateText('lastName');
-    validateEmail('email');
+    validate();
+   
     
 
     if(validateText('firstName') && validateText('lastName') && validateEmail('email')) {
